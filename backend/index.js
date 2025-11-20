@@ -6,6 +6,8 @@ const app=express();
 
 dotenv.config(); //we can access the .env from anywhere
 
+app.use(express.json()); //to parse json data from frontend
+
 app.use("/api/auth", authRouter)
 
 app.get("/",(req,res)=>{
